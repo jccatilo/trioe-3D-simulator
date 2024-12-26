@@ -3,8 +3,13 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // Use a relative base path
+  // Ensures that references to static assets work both locally and in production
+  base: './', 
   server: {
-    open: true, // Automatically open the app in a browser
+    open: true, // Automatically open your app in the browser on `npm run dev`
+  },
+  // Optional build settings
+  build: {
+    outDir: 'dist', // Name of the output directory after building
   },
 });
