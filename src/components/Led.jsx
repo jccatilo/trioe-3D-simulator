@@ -5,7 +5,7 @@ import * as THREE from 'three';
 const Led = ({ position, scale, onClick, isSelected }) => {
   const ref = useRef(); // Reference to the LED model
   const boxHelperRef = useRef(); // Reference to the bounding box helper
-  const { scene } = useGLTF('/models/Led.glb'); // Load the LED model
+  const { scene } = useGLTF('/models/led.glb'); // Load the LED model
 
   // Recalculate bounding box whenever scale, position, or selection changes
   useEffect(() => {

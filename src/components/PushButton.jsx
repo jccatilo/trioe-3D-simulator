@@ -5,7 +5,7 @@ import * as THREE from 'three';
 const PushButton = ({ position, scale, onClick, isSelected }) => {
   const ref = useRef(); // Reference to the Resistor model
   const boxRef = useRef(); // Reference to the bounding box
-  const { scene } = useGLTF('/models/PushButton.glb'); // Load the Resistor model
+  const { scene } = useGLTF('/models/pushbutton.glb'); // Load the Resistor model
 
   // Recalculate bounding box whenever scale, position, or selection changes
   useEffect(() => {
