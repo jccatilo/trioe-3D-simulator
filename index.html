@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRIOE 3D Simulator - jccatilo</title>
+  <style>
+    /* Ensure the body and html take up the full viewport */
+    html, body, #root {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Prevent scrolling */
+    }
+    canvas {
+      display: block; /* Remove scrollbars caused by inline canvas styles */
+    }
+  </style>
+</head>
+<body>
+  Note: Click to select an object. Click elsewhere to deselect. F5 or Refresh to reset view.<br>
+  &nbsp;&nbsp;Controls:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;Scroll wheel to zoom in and out<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;left click to rotate<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;ctrl + left click to move Up-Down or Left-Right<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;shift + left click to move along Z axis (towards or futher away frmo you.)
+  <div id="root"></div>
+  <script type="module" src="/src/index.jsx"></script>
+</body>
+</html>
