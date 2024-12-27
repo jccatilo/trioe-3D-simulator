@@ -6,7 +6,7 @@ import Resistor from './components/Resistor';
 import LED from './components/Led'; // Import the new LED component
 import TrioeMainBoard from './components/TrioeMainBoard'; // Import the new LED component
 import TrioeBreadBoard from './components/TrioeBreadBoard'; // Import the new LED component
-import pushbutton from './components/PushButton'; // Import the new LED component
+// import pushbutton from './components/PushButton'; // Import the new LED component
 import PushButton from './components/PushButton';
 
 const App = () => {
@@ -126,7 +126,7 @@ const App = () => {
         position={[1.85, 0.3, 1]} // Position for the Resistor
         scale={[0.05, 0.05, 0.05]}
         onClick={(object) => handleObjectClick(object)} // Pass the clicked object
-        isSelected={selectedObject && selectedObject.name === 'resistor'}
+        isSelected={selectedObject && selectedObject.name === 'pushbutton'}
       />
 
       {/* OrbitControls */}

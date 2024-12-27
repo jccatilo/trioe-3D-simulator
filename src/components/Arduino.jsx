@@ -19,7 +19,7 @@ const Arduino = ({ position, scale, onClick, isSelected }) => {
       if (isSelected) {
         // Calculate the bounding box based on the updated scale and position
         const box3 = new THREE.Box3().setFromObject(ref.current);
-        const boxHelper = new THREE.Box3Helper(box3, 'yellow');
+        const boxHelper = new THREE.Box3Helper(box3, 'violet');
         boxHelper.visible = true;
         ref.current.add(boxHelper); // Attach the new bounding box
         boxRef.current = boxHelper; // Store the reference to the bounding box

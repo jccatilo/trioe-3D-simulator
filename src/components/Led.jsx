@@ -19,7 +19,10 @@ const Led = ({ position, scale, onClick, isSelected }) => {
 
       if (isSelected) {
         // Recalculate the bounding box
-        const box3 = new THREE.Box3().setFromObject(ref.current);
+        const box3 = new THREE.Box3().setFromCenterAndSize(
+          new THREE.Vector3(0, -4, 0), // Center relative to the object
+          new THREE.Vector3(2.5, 12.5, 2.5) // Size of the box (width, height, depth)
+        );
         const boxHelper = new THREE.Box3Helper(box3, 'yellow');
         ref.current.add(boxHelper); // Attach the bounding box helper to the object
         boxHelperRef.current = boxHelper; // Store the helper reference

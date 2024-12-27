@@ -18,7 +18,10 @@ const PushButton = ({ position, scale, onClick, isSelected }) => {
 
       if (isSelected) {
         // Calculate the bounding box based on the updated scale and position
-        const box3 = new THREE.Box3().setFromObject(ref.current);
+        const box3 = new THREE.Box3().setFromCenterAndSize(
+                          new THREE.Vector3(0, 0, 3), // Center relative to the object
+                          new THREE.Vector3(10, 7, 7) // Size of the box (width, height, depth)
+                        );
         const boxHelper = new THREE.Box3Helper(box3, 'yellow');
         boxHelper.visible = true;
         ref.current.add(boxHelper); // Attach the new bounding box
